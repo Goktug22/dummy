@@ -1,10 +1,11 @@
 builder.SetTmpFolder("DocBuilderTemp");
-builder.CreateFile("docx");
+var docPath = builder.Argument("docPath"); // Get the document path from the arguments
+builder.OpenFile("docx", docPath);
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = Api.CreateParagraph();
 oParagraph.SetJc("center");
-oParagraph.AddText("Center");
+oParagraph.AddText("This is the added paragraph.");
 oDocument.Push(oParagraph);
-builder.SaveFile("docx", "sample.docx");
+builder.SaveFile("docx", "modified_document.docx");
 builder.CloseFile();
