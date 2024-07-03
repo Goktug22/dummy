@@ -1,0 +1,10 @@
+builder.SetTmpFolder("DocBuilderTemp");
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph;
+oParagraph = Api.CreateParagraph();
+oParagraph.SetJc("center");
+oParagraph.AddText("Center");
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "sample.docx");
+builder.CloseFile();
