@@ -1,6 +1,6 @@
 builder.SetTmpFolder("DocBuilderTemp");
-var docPath = builder.Argument("docPath"); // Get the document path from the arguments
-builder.OpenFile("docx", docPath);
+var docUrl = builder.Argument("docUrl"); // Get the document URL from the arguments
+builder.OpenFile("docx", docUrl);
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = Api.CreateParagraph();
