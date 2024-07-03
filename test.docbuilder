@@ -3,10 +3,9 @@ builder.CreateFile("docx");
 
 var oDocument = Api.GetDocument();
 var oParagraph = Api.CreateParagraph();
-var docUrl = builder.Argument("docUrl");
 
-oParagraph.AddText("Document URL: " + docUrl);
+oParagraph.AddText("This is a dummy text.");
 oDocument.Push(oParagraph);
 
-builder.SaveFile("docx", "output_with_url.docx");
+builder.SaveFile("docx", "dummy_text.docx");
 builder.CloseFile();
