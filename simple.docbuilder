@@ -1,0 +1,5 @@
+builder.SetTmpFolder("DocBuilderTemp");
+var docUrl = builder.Argument("docUrl");
+builder.OpenFile("docx", docUrl);
+builder.SaveFile("docx", "modified_document.docx");
+builder.CloseFile();
