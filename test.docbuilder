@@ -4,8 +4,8 @@ builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph = Api.CreateParagraph();
 
-oParagraph.AddText("This is a dummy text.");
-oPar.AddText(Argument["key"]);
+oParagraph.AddText("This is a dummy texttttttt.");
+oParagraph.AddText(Argument["key"]);
 oDocument.Push(oParagraph);
 
 builder.SaveFile("docx", "dummy_text.docx");
